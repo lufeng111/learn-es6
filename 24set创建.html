@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Set就是一堆东西的集合，不同的是Set里面不能有重复的东西的
+    let desserts = new Set('苹果，桃子，梨');
+    console.log(desserts);  // ["苹","果","桃","子","梨"] 
+    // 也可以使用add方法添加内容
+    desserts.add("香蕉")
+    console.log(desserts);  // ["苹","果","桃","子","梨","香蕉"]
+    console.log(desserts.size); // 7 
+    // 使用 has() 方法判断set里面有没有值
+    console.log(desserts.has("桃")) // true
+    // delete() 删除值
+    console.log(desserts.delete("香蕉"));  // true 删除成功就是true，删除失败就是false
+    console.log(desserts) // ["苹","果","桃","子","梨"]
+    // 使用forEach() 循环set中的每一项
+    desserts.forEach(dessert => {
+        console.log(dessert)  // 苹果，桃子，梨
+    })
+    // 使用clear() 可以清空set()
+    desserts.clear();
+    console.log(desserts);  // {}空数组
+
+
+</script>
+</html>

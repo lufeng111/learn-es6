@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 创建一个map() 可以使用new Map()
+    let food = new Map();
+    console.log(food);
+    let fruit = {},
+        cook = function(){},
+        dessert = '甜糕';
+
+        food.set(fruit, '苹果');
+        food.set(cook, '桃子');
+        food.set(dessert, '蛋糕');
+        console.log(food);  
+        // 0: {Object => "苹果"}
+        // 1: {function(){} => "桃子"}
+        // 2: {"甜糕" => "蛋糕"}
+        console.log(food.size);  // 3
+        console.log(food.get(fruit));  // 苹果
+        console.log(food.get(cook));  // 桃子
+        console.log(food.get(dessert));  // 蛋糕
+        food.delete(dessert)  // 已经删掉了
+        console.log(food.has(dessert));  // false
+
+
+
+
+
+</script>
+</html>

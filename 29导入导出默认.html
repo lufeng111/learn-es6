@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 第一种导入默认函数的的方法
+    let fruit = '苹果';
+    let dessert = '蛋糕';
+    // 模块要默认导出的东西
+    export default function dinner(fruit, dessert){
+        console.log(`今天的晚餐是${fruit}和${dessert}`);
+    }
+
+    
+    //  导入默认要导出的东西
+    import chef from '导出文件路径'
+    // 使用chef , chef可以使用默认导出的函数dinner
+    chef('牛奶', '蛋糕');  // 可以输出一句话  今天的晚餐是牛奶和蛋糕
+
+
+    // 第二种方式
+    let fruit = '苹果';
+    let dessert = '蛋糕';
+    // 模块要默认导出的东西
+    function dinner(fruit, dessert){
+        console.log(`今天的晚餐是${fruit}和${dessert}`);
+    }
+    // 把dinner作为默认要导出的函数
+    export {dinner as default};
+
+
+
+</script>
+</html>

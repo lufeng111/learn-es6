@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let breakfast = {
+        getDrink(){
+            return '啤酒'
+        }
+    };
+
+    let dinner = {
+        getDrink(){
+            return '茶'
+        }
+    };
+
+    let sunday = {
+        __proto__: breakfast
+    }
+    console.log(sunday.getDrink());  // 返回啤酒
+    console.log(Object.getPrototypeOf(sunday) === breakfast);  // 返回的是true
+    sunday.__proto__ = dinner;   // 使用__proto__ 更改sunday的PrototypeOf 的值
+    console.log(sunday.getDrink());  // 返回茶
+    console.log(Object.getPrototypeOf(sunday) === dinner);  
+
+
+
+
+</script>
+</html>

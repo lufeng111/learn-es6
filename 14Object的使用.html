@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 判断两个值是否相等
+    let a = Object.is(NaN, NaN)   // Object.is() 返回值是true或false
+    console.log(a);
+
+    // 把对象的值复制到另一个对象中
+    let breakfast = {};  // 定义一个空对象
+    // Object.assign(被赋值的那个参数，)  接收两个参数，第一个是接收者（赋值到的那个参数），第二个参数是元,赋值的数据
+    Object.assign(
+    breakfast,
+    {drink: 'beer'}
+    )
+    console.log(breakfast)   // 打印breakfast 就是{drink: "beer"}
+
+</script>
+</html>

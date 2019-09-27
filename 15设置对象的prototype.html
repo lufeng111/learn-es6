@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let breakfast = {
+        getDrink(){
+            return '啤酒'
+        }
+    };
+
+    let dinner = {
+        getDrink(){
+            return '茶'
+        }
+    };
+    // 创建一个对象sunday，基于breakfast这个对象去创建, 这样sunday就会具有breakfast 的方法getDrink, 返回值啤酒
+    let sunday = Object.create(breakfast);
+    console.log(sunday.getDrink())  // 打印getDrink()返回值，啤酒
+    console.log(Object.getPrototypeOf(sunday) === breakfast);  // 返回true   判断sunday的 getPrototypeOf是不是等于breakfast
+
+    // 修改sunday的prototype值,  把sunday 的prototype修改为dinner
+    Object.setPrototypeOf(sunday, dinner);  
+    console.log(sunday.getDrink());   // js单线程的运行方式（从上到下运行）
+    console.log(Object.getPrototypeOf(sunday)===dinner);  // 打印true
+
+    
+
+
+
+
+</script>
+</html>

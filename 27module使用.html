@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //  导出 fruit 在fruit 前面杰加上 export
+    // export let fruit = '苹果';
+    let fruit = '苹果';
+    let dessert = '桃子';
+
+    // 或者在文件底部加上export
+    export {fruit, dessert};  // 导出方法，类，变量
+
+    // 导出文件 ，也需要导入文件
+    import {fruit, dessert} from '导入文件所在的位置';
+    console.log(fruit, dessert);  // 显示声明的变量的值
+    
+    // 使用import 导入全部的东西
+    import * as Chef from '导入的文件路径'
+    // 这个 Chef 就会是一个对象，包含module/Chef 下面的所有东西
+
+
+
+</script>
+</html>

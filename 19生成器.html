@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 生成器
+    function* chef(){
+        yield '苹果';
+        yield '甜粽子';
+    }
+    let lufeng = chef();
+    console.log(lufeng.next());  // {value: "苹果", done: false}
+    console.log(lufeng.next());  // {value: "甜粽子", done: false}
+    console.log(lufeng.next());  // {value: undefined, done: true}
+
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let fruit = '苹果';
+    let dessert = '蛋糕';
+    function dinner(fruit,dessert) {
+        console.log(`今晚的餐是 ${fruit} 和 ${dessert}`);
+    }
+    // 导出fruit,dessert,dinner   把dinner重命名为 supper
+    export {fruit,dessert,dinner as supper}
+
+
+    //  导入
+    import {fruit, dessert, supper as dinner } from '导入文件的路径';
+    // 调用导入的dinner
+    dinner(fruit, dessert);
+
+
+
+</script>
+</html>

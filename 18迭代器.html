@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function chef(foods){
+        let i = 0;
+        return {
+            
+            next(){
+                // 定义一下每次调用next()时，返回的value和done
+                let done = (i >= foods.length);  // 如果 i 大于foods的length
+                console.log(done);  // 前面连个返回的是false, foods是一个数组时，有两个值
+                let value = !done ? foods[i++]:undefined;
+                // next() 这个方法返回一个对象
+                return {
+                    value: value,
+                    done: done
+                }
+            }
+        }
+    }
+    let lufeng = chef(['苹果果', '桃子'])
+    console.log(lufeng.next());   // {value: "苹果果", done: false}
+    console.log(lufeng.next());   // {value: "桃子", done: false}
+    console.log(lufeng.next());    // {value: undefined, done: true}
+
+
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let apple = "苹果";
+    let pear = "梨";
+    // let peach = "桃子";
+    // kitchen是一个方法，打印其中的字符串的部分，和value值得部分
+    //  \n 表示换行
+    // let breakfast = kitchen`今天的早餐是\n ${apple}与${pear}!!!!`;
+    // function kitchen(string, ...values){
+    //     console.log(string);
+    //     console.log(values);
+
+
+    let breakfast = kitchen`今天的早餐是\n ${apple}与${pear}!!!!`;
+    function kitchen(string, ...values){
+       let result = '';
+       for(var i=0; i<values.length; i++){
+           result += string[i];
+           result += values[i];
+       }
+       result += string[string.length-1];
+       return result;
+    }
+    console.log(breakfast)
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     let breakfast = {
+        getDrink(){
+            return '啤酒'
+        }
+    };
+
+    let dinner = {
+        getDrink(){
+            return '茶'
+        }
+    };
+
+    let sunday = {
+        // __proto__ 设置prototypeOf
+        __proto__: breakfast,
+        // 重新定义一个方法getDrink()覆盖掉上面的breakfast里面的etDrink()方法，
+        getDrink(){
+        // 重新定义以下getDrink方法，覆盖掉原来的breakfast中的getDrink犯法，返回的值是原来的breakfast中的getDrink返回的值加上其他的
+        // 返回  super.getDrink意思是执行以下breakfast里面的getDrink方法，去得到返回来的值
+        return super.getDrink() + '牛奶'
+        }
+    }
+    console.log(sunday.getDrink());   // 打印的值 啤酒牛奶
+
+
+</script>
+</html>

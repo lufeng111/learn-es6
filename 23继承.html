@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// 一个类可以继承其他类的值
+// 定义一个Person的类
+class Person{
+    constructor(name,birthday){
+        this.name = name;
+        this.birthday = birthday; 
+    }
+    intro(){
+        // 用模板字符串拼接
+        return `${this.name}, ${this.birthday}`;
+    }
+}
+// 再定义一个类Chef，通过extends扩展Person类
+class Chef extends Person {
+    // 如果Chef这个类有constructor方法，就需要使用super() 方法
+    constructor(name, birthday){
+        // super() 方法可以调用该父类Person里面的东西
+        super(name, birthday);
+    }
+}
+// 因为Chef类继承了Person类，所以Person类的方法可以直接使用
+let lufeng = new Chef('lufeng', '1995-2-28');
+
+
+
+</script>
+</html>

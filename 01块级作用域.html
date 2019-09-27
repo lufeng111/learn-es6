@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    ahahh
+</body>
+<script>
+// 块级作用域
+'use strict'
+if(true) {
+    let fruit = "苹果";
+}
+console.log(fruit); // 打印报错，fruit没有声明，因为let声明的是块级作用域，在if的外面访问不到fruit
+
+
+</script>
+</html>
